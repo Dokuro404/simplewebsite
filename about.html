@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Thet Tun Aung</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="photos/logo.png">
+  <style>
+    /* --- Additional layout tweaks just for About page --- */
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .about-photos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      animation: slowFadeIn 6s ease forwards;
+    }
+
+    .about-photos img {
+      width: 280px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      transition: transform 1s ease, box-shadow 1s ease;
+    }
+
+    .about-photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+    }
+
+    .about-text {
+      max-width: 550px;
+      text-align: right;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .skills {
+      justify-content: flex-end;
+    }
+
+    @media(max-width: 880px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-text {
+        text-align: center;
+      }
+      .skills {
+        justify-content: center;
+      }
+      .about-photos {
+        flex-direction: row;
+      }
+      .about-photos img {
+        width: 45%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Thet Tun Aung</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="vision.html">Vision</a>
+      <a href="mission.html">Mission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="about-container">
+      <!-- Two photos on the left -->
+      <div class="about-photos">
+        <img src="photos/nitfastivalphoto1.jpg" alt="Thet Tun Aung photo 1">
+        <img src="photos/parkphoto3.jpg" alt="Thet Tun Aung photo 2">
+      </div>
+
+      <!-- Text aligned to right -->
+      <div class="about-text card">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Thet Tun Aung</strong> — a passionate Java developer who enjoys building creative and functional applications. My focus is on writing clean, efficient, and scalable code that turns ideas into reality.</p>
+
+        <p>I graduated from <strong>NIT College</strong> and earned my <strong>IP Certification (A+)</strong>. I’ve completed Java SE training, gained experience in GUI development with XAMPP/MySQL, and also explored digital marketing and Japanese language (N4 level).</p>
+
+        <p>I believe in continuous learning, problem-solving, and teamwork to create meaningful technology that makes people’s lives better.</p>
+
+        <h3>Skills</h3>
+        <div class="skills">
+          <span>Java</span>
+          <span>GUI Development</span>
+          <span>XAMPP/MySQL</span>
+          <span>Web Design</span>
+          <span>Digital Marketing</span>
+          <span>Japanese (N4)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Thet Tun Aung | Portfolio Website
+  </footer>
+</body>
+</html>

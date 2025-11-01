@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision — Thet Tun Aung</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpg" href="photos/logo.png">
+  <style>
+    /* --- Vision-specific styles --- */
+    .vision-gallery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .vision-gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+      transition: transform 1s ease, box-shadow 1s ease, opacity 2s ease;
+      opacity: 0;
+      animation: slowFadeIn 5s ease forwards;
+    }
+
+    .vision-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+    }
+
+    @media(max-width: 900px) {
+      .vision-gallery img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Thet Tun Aung</a></h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="vision.html">Vision</a>
+      <a href="mission.html">Mission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="vision">
+    <div class="card">
+      <h2>My Vision</h2>
+      <p>My vision is to become a highly skilled software developer who creates innovative, efficient, and user-friendly applications that solve real-world problems. I strive to leverage modern technologies to enhance everyday life and business solutions.</p>
+      <p>I aim to contribute to projects that positively impact society and inspire other developers by sharing knowledge, building scalable solutions, and maintaining high-quality code standards.</p>
+
+      <!-- Vision Images -->
+      <div class="vision-gallery">
+        <img src="photos/swingphoto.jpg" alt="Vision Image 1">
+        <img src="photos/coding1.jpg" alt="Vision Image 2">
+        <img src="photos/coding.jpg" alt="Vision Image 3">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Thet Tun Aung | Portfolio Website
+  </footer>
+</body>
+</html>

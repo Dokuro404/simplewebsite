@@ -1,0 +1,251 @@
+:root {
+  --bg: #000;
+  --text: #ff0000;
+  --muted: #ff6666;
+  --primary: #ff0000;
+  --gold: #ffd700;
+}
+
+/* ---------- Base Styles ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  animation: fadeInBody 2s ease-in forwards;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+header h1 a {
+  text-decoration: none;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #fff;
+}
+
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  margin-left: 20px;
+  position: relative;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* ---------- Section ---------- */
+section {
+  padding: 120px 60px 60px;
+  min-height: 100vh;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: rgba(255, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  opacity: 0;
+  animation: slowFadeIn 6s ease forwards;
+}
+
+@keyframes slowFadeIn {
+  0% { opacity: 0; transform: scale(0.9) rotate(-3deg); }
+  50% { opacity: 0.5; transform: scale(1.03) rotate(1deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3 {
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h2::after, h3::after {
+  content: "";
+  display: none; /* 🔥 remove line under title */
+}
+
+p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: rgba(255, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.skills span:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Contact ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+/* ---------- Social Links ---------- */
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: var(--gold);
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: var(--gold);
+  font-size: 13px;
+  background: #000;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 880px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 8px 0;
+    display: inline-block;
+  }
+
+  section {
+    padding: 120px 20px 60px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .hero img {
+    width: 260px;
+  }
+}
